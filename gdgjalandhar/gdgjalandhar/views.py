@@ -5,3 +5,7 @@ from django.template import RequestContext
 def home(request):
     templatename='index.html'
     return render_to_response(templatename,{},context_instance=RequestContext(request))
+
+def about(request):
+    templatename='about.html'
+    return render_to_response(templatename,{},context_instance=RequestContext(request))
