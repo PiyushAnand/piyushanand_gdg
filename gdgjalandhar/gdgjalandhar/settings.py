@@ -83,7 +83,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 TEMPLATE_DIRS=(
-    os.path.join(BASE_DIR,'gdgjalandhar/temp'),
+    os.path.join(BASE_DIR,'gdgjalandhar/templates'),
     )
 STATICFILES_DIRS=(
     os.path.join(BASE_DIR,'gdgjalandhar/media'),
