@@ -12,7 +12,7 @@ class BannerAdmin(admin.ModelAdmin):
 admin.site.register(banner,BannerAdmin)
 
 class SocialAdmin(admin.ModelAdmin):
-    fields = ['logo','fb','google','email','social1']
-    list_display = ['logo','fb','google','email','social1']
+    fields = ['logo' , 'fb' , 'google' , 'email' , 'social1']
+    list_display = ['logo' , 'fb' ,'google' ,'email' ,'social1']
 admin.site.register(social,SocialAdmin)
 # Register your models here.
