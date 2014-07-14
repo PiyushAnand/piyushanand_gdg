@@ -49,41 +49,41 @@
     <div id="wrapper" class="clearfix">
     
     
-        <div id="top-bar">
+      <!--  <div id="top-bar">
             
-            <div class="container clearfix">
+           <div class="container clearfix">
         
                 <div id="top-menu">
-                
+
                     <ul>
-                    
+
                         <li><span>/</span><a href="index-2.html">Home</a></li>
-                        <li><span>/</span><a href="about.html">About</a></li>
+                        <li><span>/</span><a href="/about/">About</a></li>
                         <li><span>/</span><a href="contact.html">Contact</a></li><li><span>/</span><a href="opportunities.html">Opportunities</a></li>
-                    
+
                     </ul>
-                
+
                 </div>
             
             
                 <div id="top-social">
-                
+
                     <ul>
-                    
+
                         <li class="ts-facebook"><a href="https://www.facebook.com/GoogleDeveloperGroupMumbai" target="_blank"><div class="ts-icon"></div><div class="ts-text">Facebook</div></a></li>
                         <li class="ts-twitter"><a href="https://twitter.com/GDGMumbai/" target="_blank"><div class="ts-icon"></div><div class="ts-text">Twitter</div></a></li>
                         <li class="ts-gplus"><a href="https://plus.google.com/109582787530740759595/" target="_blank"><div class="ts-icon"></div><div class="ts-text">Google+</div></a></li>
                         <li class="ts-flickr"><a href="https://www.facebook.com/groups/googledevelopergroup/" target="_blank"><div class="ts-icon"></div><div class="ts-text">Facebook&nbsp;Group</div></a></li>
                         <li class="ts-mail"><a href="mailto:contact@gdgmumbai.org"><div class="ts-icon"></div><div class="ts-text">contact@gdgmumbai.org</div></a></li>
-                        
+
                     </ul>
-                
+
                 </div>
-            
+
             </div>
-        
+
         </div>
-    
+    -->
         
         <div id="header">
         
@@ -92,9 +92,10 @@
             
                 
                 <div id="logo">
-                
-                    <a href="index-2.html"><img src="{{ STATIC_URL }}images/logo.png" alt="GDG Mumbai" title="GDG Mumbai" /></a>
-                
+
+
+                   <!-- <a href="index-2.html"><img src="{{ STATIC_URL }}images/logo.png" alt="GDG Mumbai" title="GDG Mumbai" /></a>-->
+                <a href="index-2.html"><img src="{{ STATIC_URL }}{{ social.logo }}" alt="GDG Jalandhar" title="GDG Jalandhar" /></a>
                 </div>
                 
                 
@@ -102,21 +103,36 @@
                 
                 
                     <ul>
-                    
+                        {% for i in menu %}
+                        <li><a href="/about/"><div>{{ i.menu_title }}</div><span>{{ i.menu_subtitle }}</span></a></li>
+                        {% endfor %}
+                    <!--
                         <li class="current"><a href="index-2.html"><div>Home</div><span>Let's Start here</span></a></li>
-                        <li><a href="about.html"><div>About</div><span>Know us better</span></a></li>
+                        <li><a href="/about/"><div>About</div><span>Know us better</span></a></li>
                         <li><a href="events.html"><div>Events</div><span>What we do</span></a></li>
                         <li><a href="https://plus.google.com/photos/109582787530740759595/albums" target="_blank"><div>Gallery</div><span>Some snaps</span></a></li>
                         <li><a href="connect.html"><div>Join</div><span>Connect &amp; Inspire</span></a></li><li><a href="contact.html"><div>Contact</div><span>Get in Touch</span></a></li>
-                    
+                    -->
                     </ul>
                 
                 
                 </div>
-                
-                
+
             </div>
-    
+                <div id="top-social">
+
+                    <ul>
+
+                        <li class="ts-facebook"><a href="https://www.facebook.com/GoogleDeveloperGroupMumbai" target="_blank"><div class="ts-icon"></div><div class="ts-text">Facebook</div></a></li>
+                        <li class="ts-twitter"><a href="https://twitter.com/GDGMumbai/" target="_blank"><div class="ts-icon"></div><div class="ts-text">Twitter</div></a></li>
+                        <li class="ts-gplus"><a href="https://plus.google.com/109582787530740759595/" target="_blank"><div class="ts-icon"></div><div class="ts-text">Google+</div></a></li>
+                        <li class="ts-flickr"><a href="https://www.facebook.com/groups/googledevelopergroup/" target="_blank"><div class="ts-icon"></div><div class="ts-text">Facebook&nbsp;Group</div></a></li>
+                        <li class="ts-mail"><a href="mailto:contact@gdgmumbai.org"><div class="ts-icon"></div><div class="ts-text">contact@gdgmumbai.org</div></a></li>
+
+                    </ul>
+
+                </div>
+
        
         </div>
         
@@ -153,7 +169,7 @@
                             
                         </div>
                         
-                        <div class="promo-action"><a href="about.html">About us</a></div>
+                        <div class="promo-action"><a href="/about/">About us</a></div>
                     
                     </div>
                     
