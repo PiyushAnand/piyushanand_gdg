@@ -33,12 +33,12 @@
 	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
 	<script type="text/javascript" src="{{ STATIC_URL }}js/plugins.js"></script>
 	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.camera.js"></script>
-    <!-- jQuery library (served from Google) -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- jQuery library (served from Google)
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
     <!-- bxSlider Javascript file -->
-    <script src="/js/jquery.bxslider.min.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.bxslider.js"></script>
     <!-- bxSlider CSS file -->
-    <link href="/lib/jquery.bxslider.css" rel="stylesheet" />
+    <link href="{{ STATIC_URL }}css/jquery.bxslider.css" rel="stylesheet" />
     
     <!-- ============================================
         Document Title
@@ -48,7 +48,7 @@
 
 </head>
 
-<body class="stretched">
+<body class="stretched" >
 
 
     <div id="wrapper" class="clearfix">
@@ -145,13 +145,10 @@
 
         </div>
 
-    <ul class="bxslider">
-
-  <li><img src="{{ STATIC_URL }}images/{{ banner.banner1 }} " width="50%" /></li>
-  <li><img src="{{ STATIC_URL }}images/{{ banner.banner1 }}"  width="50%"/></li>
-  <li><img src="{{ STATIC_URL }}images/{{ banner.banner1 }}"  width="50%"/></li>
-  <li><img src="{{ STATIC_URL }}images/{{ banner.banner1 }}"  width="50%"/></li>
-
+    <ul class="bxslider" style="background-color:#e3efff">
+{% for i in banner %}
+  <li><img src="{{ STATIC_URL }}images/{{ i.banner1 }} " width="60%" /></li>
+{% endfor %}
     </ul>
    <!--
         
@@ -242,6 +239,12 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+    $('.bxslider').bxSlider({
+  minSlides: 1,
+  maxSlides: 2,
+  slideWidth: 300,
+  slideMargin: 80
+});
 
 </script>
 

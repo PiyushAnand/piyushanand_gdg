@@ -100,7 +100,7 @@ body {
 	line-height: 1;
 	color: #777;
 	font: 12px/20px "Open Sans", Helvetica, Arial, sans-serif;
-	background: #EEE url("images/patterns/light/pattern10.png") repeat fixed;
+	background: #EEE url("../images/patterns/light/pattern10.png") repeat fixed;
 }
 
 input,
@@ -665,7 +665,7 @@ form small {
 
 #top-social li.ts-facebook a { background-color: #3B5998; }
 
-#top-social li.ts-facebook .ts-icon { background: url("images/icons/social/facebook.png") no-repeat center center; }
+#top-social li.ts-facebook .ts-icon { background: url("../images/icons/social/facebook.png") no-repeat center center; }
 
 #top-social li.ts-twitter a { background-color: #3CF; }
 
