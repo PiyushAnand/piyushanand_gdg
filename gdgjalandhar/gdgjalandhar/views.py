@@ -6,9 +6,11 @@ def home(request):
     templatename='index.html'
     menuobj=menu.objects.all()
     socialobj=social.objects.all()
+    bannerobj=banner.objects.all()
     return render_to_response(templatename,{
         'menu':menuobj,
-        'social':socialobj,
+        'social':socialobj[0],
+        'banner':bannerobj,
     },context_instance=RequestContext(request))
 
 def about(request):

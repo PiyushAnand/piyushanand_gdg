@@ -33,6 +33,12 @@
 	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
 	<script type="text/javascript" src="{{ STATIC_URL }}js/plugins.js"></script>
 	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.camera.js"></script>
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="/js/jquery.bxslider.min.js"></script>
+    <!-- bxSlider CSS file -->
+    <link href="/lib/jquery.bxslider.css" rel="stylesheet" />
     
     <!-- ============================================
         Document Title
@@ -89,13 +95,13 @@
             
             <div class="container clearfix">
             
-                <!--
+
                 <div id="logo">
 
 
                    <!-- <a href="index-2.html"><img src="{{ STATIC_URL }}images/logo.png" alt="GDG Mumbai" title="GDG Mumbai" /></a>
-                <a href="index-2.html"><img src="{{ STATIC_URL }}images/{{ social.logo }} " height="100" width="250" alt="GDG Jalandhar" title="GDG Jalandhar" /></a>
-                </div> -->
+            -->    <a href="/"><img src="{{ STATIC_URL }}images/{{ social.logo }} " height="100" width="300" alt="GDG Jalandhar" title="GDG Jalandhar" /></a>
+                </div>
 
                 
                 <div id="primary-menu">
@@ -103,7 +109,7 @@
                 
                     <ul>
                         {% for i in menu %}
-                        <li><a href="/about/"><div>{{ i.menu_title }}</div><span>{{ i.menu_subtitle }}</span></a></li>
+                        <li><a href="{{ i.href }}"><div>{{ i.menu_title }}</div><span>{{ i.menu_subtitle }}</span></a></li>
                         {% endfor %}
                     <!--
                         <li class="current"><a href="index-2.html"><div>Home</div><span>Let's Start here</span></a></li>
@@ -121,7 +127,7 @@
 
 
                 <div id="top-social">
-                    <li class="ts-facebook"><a href="{{ social.logo }}" target="_blank"><div class="ts-icon"></div><div class="ts-text">Facebook</div></a></li>
+                    <li class="ts-facebook"><a href="{{ social.facebook }}" target="_blank"><div class="ts-icon"></div><div class="ts-text">Facebook</div></a></li>
 
                     <!--
                     <ul>
@@ -138,20 +144,29 @@
 
 
         </div>
-        
+
+    <ul class="bxslider">
+
+  <li><img src="{{ STATIC_URL }}images/{{ banner.banner1 }} " width="50%" /></li>
+  <li><img src="{{ STATIC_URL }}images/{{ banner.banner1 }}"  width="50%"/></li>
+  <li><img src="{{ STATIC_URL }}images/{{ banner.banner1 }}"  width="50%"/></li>
+  <li><img src="{{ STATIC_URL }}images/{{ banner.banner1 }}"  width="50%"/></li>
+
+    </ul>
+   <!--
         
          <div id="slider" style="height: auto;">
         
             <div class="container clearfix">
             
-            <a href="events/io14.html">
-                <img src="{{ STATIC_URL }}images/portfolio/full/io14.jpg" alt="Google I/O Extended Mumbai" style="width: 100%;" />
+            <a href="/gallery/">
+                <img src="{{ STATIC_URL }}images/{{ banner.banner1 }}" alt="Avinash Mishra With Larry Page And Sundar Pichai " style="width: 60%;" />
             </a>
             
             </div>
         
         </div>
-        
+-->
         
         <div id="content">
         
@@ -197,16 +212,11 @@
             
                 <div class="col_half">
                 
-                    Copyrights &copy; 2013 &amp; All Rights Reserved by GDG Mumbai.
+                    Copyrights &copy; 2014 &amp; All Rights Reserved by GDG Jalandhar.
                 
                 </div>
                 
-                <div class="col_half col_last tright">
-                
-                    <a href="#">Sitemap</a><span class="link-divider">/</span><a href="#">FAQs</a>
-                
-                </div>
-            
+
             
             </div>
         
@@ -237,6 +247,4 @@
 
 </body>
 
-
-<!-- Mirrored from www.gdgmumbai.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Jul 2014 03:54:27 GMT -->
 </html>
