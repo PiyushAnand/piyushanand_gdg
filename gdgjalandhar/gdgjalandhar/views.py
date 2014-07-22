@@ -4,6 +4,7 @@ from django.template import RequestContext
 from gdgmain.models import menu,banner,social
 from about.models import About_img,About_us,Img
 
+
 def home(request):
     templatename='index.html'
     menuobj=menu.objects.all()
@@ -37,3 +38,5 @@ def gallery(request):
 def contactus(request):
     templatename='contactus.html'
     return render_to_response(templatename,{},context_instance=RequestContext(request))
+
+

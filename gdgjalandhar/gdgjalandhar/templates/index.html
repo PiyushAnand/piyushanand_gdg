@@ -33,11 +33,7 @@
 	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
 	<script type="text/javascript" src="{{ STATIC_URL }}js/plugins.js"></script>
 	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.camera.js"></script>
-    <!-- jQuery library (served from Google)
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
-    <!-- bxSlider Javascript file -->
     <script src="{{ STATIC_URL }}js/jquery.bxslider.js"></script>
-    <!-- bxSlider CSS file -->
     <link href="{{ STATIC_URL }}css/jquery.bxslider.css" rel="stylesheet" />
     
     <!-- ============================================
@@ -109,8 +105,15 @@
                 
                     <ul>
                         {% for i in menu %}
-                        <li><a href="{{ i.href }}"><div>{{ i.menu_title }}</div><span>{{ i.menu_subtitle }}</span></a></li>
+
+                           {% if i.menu_title == 'Gallery'  %}
+                           
+                                <li><a target="_blank" href="{{ i.href }}"><div>{{ i.menu_title }}</div><span>{{ i.menu_subtitle }}</span></a></li>
+                               {% else %}
+                               <li><a  href="{{ i.href }}"><div>{{ i.menu_title }}</div><span>{{ i.menu_subtitle }}</span></a></li>
+                            {% endif %}
                         {% endfor %}
+
                     <!--
                         <li class="current"><a href="index-2.html"><div>Home</div><span>Let's Start here</span></a></li>
                         <li><a href="/about/"><div>About</div><span>Know us better</span></a></li>
@@ -152,42 +155,41 @@
     </ul>
 
         <div id="content">
-        
-        
+
+
             <div class="content-wrap">
-            
-            
+
+
                 <div class="container clearfix">
-                
-                
+
+
                     <div class="promo">
-                    
+
                         <div class="promo-desc">
-                        
+
                             <h3 style="text-transform:uppercase">Google Developer Group Jalandhar</h3>
-                            
+
                             <span>A community where programmers meet to discuss and work with several Google developer resources &amp; products.</span>
-                            
+
                         </div>
-                        
+
                         <div class="promo-action"><a href="/about/">About us</a></div>
-                    
+
                     </div>
-                    
-                   
-                    
-                                        
+
+
+
+
                     <div class="clear"></div>
-                    
-              
-            
-            
+
+
+
+
             </div>
-        
-        
+
+
         </div>
-        
-        
+
         <div id="copyrights" class="copyrights-dark">
         
             <div class="container clearfix">
